@@ -1,0 +1,104 @@
+---
+const benefits = [
+  {
+    icon: "💪",
+    title: "Aumenta la Fuerza",
+    description: "Incrementa tu fuerza muscular hasta un 15% con el uso regular de creatina CH+ de calidad premium."
+  },
+  {
+    icon: "⚡",
+    title: "Mejora el Rendimiento",
+    description: "Optimiza tu rendimiento en ejercicios de alta intensidad y entrenamientos explosivos."
+  },
+  {
+    icon: "🔄",
+    title: "Acelera la Recuperación",
+    description: "Reduce el tiempo de recuperación entre series y sesiones de entrenamiento."
+  },
+  {
+    icon: "🏃",
+    title: "Aumenta la Resistencia",
+    description: "Mejora tu capacidad para mantener un rendimiento de alta intensidad por más tiempo."
+  },
+  {
+    icon: "🧠",
+    title: "Función Cognitiva",
+    description: "Apoya la función cerebral y mejora la concentración durante el entrenamiento."
+  },
+  {
+    icon: "🔬",
+    title: "Respaldado por Ciencia",
+    description: "Miles de estudios científicos respaldan la eficacia y seguridad de la creatina CH+."
+  }
+];
+---
+
+<section id="benefits" class="py-20 bg-white transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16 slide-up-on-scroll">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-dark mb-4">
+        Beneficios de <span class="text-primary">CH+</span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        La creatina CH+ es uno de los suplementos más estudiados y efectivos para mejorar el rendimiento deportivo. Descubre cómo puede transformar tu entrenamiento.
+      </p>
+    </div>
+    
+    <!-- Benefits Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {benefits.map((benefit, index) => (
+        <div class={`benefit-card bg-gray-50 p-6 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 scale-in-on-scroll`} style={`animation-delay: ${0.15 * index}s`}>
+          <div class="text-4xl mb-4">{benefit.icon}</div>
+          <h3 class="text-xl font-bold text-dark mb-3">{benefit.title}</h3>
+          <p class="text-gray-600 leading-relaxed">{benefit.description}</p>
+        </div>
+      ))}
+    </div>
+    
+    <!-- Scientific Evidence -->
+    <div class="mt-16 bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white slide-up-on-scroll">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Respaldado por la Ciencia</h3>
+          <p class="text-lg mb-4 opacity-90">
+            Más de 1,000 estudios científicos han demostrado que la creatina CH+ es segura y efectiva para mejorar el rendimiento deportivo.
+          </p>
+          <p class="opacity-90">
+            La International Society of Sports Nutrition la considera uno de los suplementos más efectivos disponibles para atletas.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 text-center counter-trigger">
+          <div class="bg-white/10 rounded-lg p-4">
+            <div class="text-3xl font-bold"><span class="counter" data-target="1000">0</span>+</div>
+            <div class="text-sm opacity-80">Estudios Científicos</div>
+          </div>
+          <div class="bg-white/10 rounded-lg p-4">
+            <div class="text-3xl font-bold"><span class="counter" data-target="15">0</span>%</div>
+            <div class="text-sm opacity-80">Aumento de Fuerza</div>
+          </div>
+          <div class="bg-white/10 rounded-lg p-4">
+            <div class="text-3xl font-bold"><span class="counter" data-target="30">0</span>%</div>
+            <div class="text-sm opacity-80">Mejor Recuperación</div>
+          </div>
+          <div class="bg-white/10 rounded-lg p-4">
+            <div class="text-3xl font-bold"><span class="counter" data-target="100">0</span>%</div>
+            <div class="text-sm opacity-80">Segura y Natural</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .benefit-card {
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .benefit-card:hover {
+    border-color: #F9D128;
+    transform: translateY(-2px);
+  }
+</style>

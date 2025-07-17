@@ -1,0 +1,107 @@
+---
+const testimonials = [
+  {
+    name: "Carlos Rodríguez",
+    role: "Powerlifter Profesional",
+    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200",
+    quote: "MOVEON y su marca CH+ han sido un game-changer en mi entrenamiento. He visto mejoras notables en mi fuerza y recuperación desde que empecé a usarlo.",
+    rating: 5
+  },
+  {
+    name: "María González",
+    role: "Entrenadora Personal",
+    image: "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=200",
+    quote: "Recomiendo MOVEON a todos mis clientes. La calidad de CH+ es excepcional y los resultados hablan por sí solos. Es mi tienda de confianza.",
+    rating: 5
+  },
+  {
+    name: "Andrés López",
+    role: "Atleta de CrossFit",
+    image: "https://images.pexels.com/photos/1697214/pexels-photo-1697214.jpeg?auto=compress&cs=tinysrgb&w=200",
+    quote: "Desde que compro en MOVEON y uso CH+, mi rendimiento en los WODs ha mejorado significativamente. Más energía, más resistencia, mejores tiempos.",
+    rating: 5
+  }
+];
+---
+
+<section id="testimonials" class="py-20 bg-gray-50 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16 slide-up-on-scroll">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-dark mb-4">
+        Lo que dicen nuestros <span class="text-primary">Clientes</span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Descubre por qué miles de atletas confían en MOVEON y CH+ para alcanzar sus objetivos de rendimiento.
+      </p>
+    </div>
+    
+    <!-- Testimonials Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {testimonials.map((testimonial, index) => (
+        <div class={`testimonial-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 scale-in-on-scroll`} style={`animation-delay: ${0.2 * index}s`}>
+          <!-- Rating -->
+          <div class="flex mb-4">
+            {Array.from({ length: testimonial.rating }, (_, i) => (
+              <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+            ))}
+          </div>
+          
+          <!-- Quote -->
+          <blockquote class="text-gray-700 mb-6 italic leading-relaxed">
+            "{testimonial.quote}"
+          </blockquote>
+          
+          <!-- Author -->
+          <div class="flex items-center">
+            <img 
+              src={testimonial.image} 
+              alt={testimonial.name}
+              class="w-12 h-12 rounded-full object-cover mr-4"
+            />
+            <div>
+              <div class="font-semibold text-dark">{testimonial.name}</div>
+              <div class="text-sm text-gray-600">{testimonial.role}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <!-- Social Proof -->
+    <div class="mt-16 text-center fade-in-on-scroll">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center counter-trigger">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-primary mb-2"><span class="counter" data-target="10000">0</span>+</div>
+          <div class="text-gray-600">Clientes Satisfechos</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-primary mb-2"><span class="counter" data-target="4">0</span>.9/5</div>
+          <div class="text-gray-600">Valoración Media</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-primary mb-2"><span class="counter" data-target="95">0</span>%</div>
+          <div class="text-gray-600">Recomendarían MOVEON</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-primary mb-2"><span class="counter" data-target="24">0</span>/7</div>
+          <div class="text-gray-600">Soporte al Cliente</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-card {
+    transform: translateY(0);
+    border-top: 3px solid transparent;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    border-top-color: #F9D128;
+  }
+</style>

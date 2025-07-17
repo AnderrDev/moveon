@@ -1,0 +1,87 @@
+---
+---
+
+<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Hero Background Image -->
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+      alt="Persona entrenando con suplementos MOVEON"
+      class="w-full h-full object-cover"
+    />
+    <!-- Dark overlay for contrast -->
+    <div class="absolute inset-0 bg-hero-gradient"></div>
+  </div>
+  
+  <!-- Hero Content -->
+  <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <!-- Animated Brand Logo -->
+    <div class="mb-8 opacity-0 animate-fade-in">
+      <div class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-none mb-4">
+        MOVE<span class="text-primary">ON</span>
+      </div>
+      <p class="text-lg sm:text-xl text-gray-200 font-sans">Tu tienda de suplementos deportivos</p>
+    </div>
+    
+  
+    
+    <!-- Main Slogan -->
+    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-black text-white leading-tight mb-6 opacity-0 animate-fade-up hero-text-delay-2">
+      Activa tu <span class="text-primary">fuerza interior</span>
+    </h1>
+    
+    <!-- Subtitle -->
+    <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto font-sans opacity-0 animate-fade-up hero-text-delay-2">
+      Descubre la creatina premium CH+ y lleva tu rendimiento al siguiente nivel
+    </p>
+    
+    <!-- CTA Button -->
+    <div class="opacity-0 animate-fade-up hero-text-delay-3">
+      <a href="#products" class="inline-flex items-center px-8 py-4 bg-primary text-secondary font-bold rounded-lg hover:bg-yellow-400 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-sans text-lg">
+        Comprar Ahora
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .animate-fade-up {
+    animation: fadeUp 1s ease-out forwards;
+  }
+</style>
